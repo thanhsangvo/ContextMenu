@@ -9,7 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+        
+        Image("girl")
+            .resizable()
+            .frame(height: 300)
+            .contextMenu{
+                VStack {
+                    
+                    Button(action: {
+                        print("save")
+                    }) {
+                        HStack{
+                            Image("folder.fill")
+                            Text("Save to Gallery")
+                        }
+                    }
+                    
+                    Button(action: {
+                        print("send")
+                    }) {
+                        HStack{
+                            Image("paperplane.fill")
+                            Text("Send")
+                        }
+                    }
+            }
+        }
     }
 }
 
